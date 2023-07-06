@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+:root {
+    --max-page-width: 1280px;
+    --page-margin: 24px;
+    --default-border-radius: 4px;
+    --border-radius-medium: 8px;
+    --color-primary:  #D33396;
+   --color-logos:#164B60;
+    --color-primary-dark: #337ac2;
+    --color-primary-variant: #F0F0F0;
+    --color-primary-variant-dark: #b10b71;
+    --color-error: rgb(245, 76, 76);
+    --color-success: rgb(53, 184, 107);
+    --color-primary-variant-light: #d3339621;
+   
+    --color-secondary: White;
+    --color-on-secondary: #08003A;
+    --surface-color: #F5F5F5;
+    --surface-variant-color: #ffffff;
+    --surface-dark-color: #e0e0e0;
+    
+
+
+    --big-2-font: 28px;
+    --big-font: 24px;
+    --average-font: 20px;
+    --medium-font: 16px;
+    --medium-2-font: 18px;
+    --small-font: 12px;
+}
+
+
+
+
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 5rem;
+    background-color: #D33396;
+    padding: 2rem;
+
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+   
+
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    
+font-size: var(--average-font);
+font-weight: 700;
+}
+.navbar ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+
+/* =============================hero section css starts here======================== */
+.main-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color:var(  --color-primary-variant) ;
+    padding: 2rem;
+    height: 50vh;
+    margin: 2rem;
+    border-radius: 1rem;
+    
+}
+
+
+.main-hero .first h1{
+    font-size: var(  --big-2-font);
+    padding-bottom: 1rem;
+
+}
+
+.main-hero .second{
+    background-color:var( --color-on-secondary) ;
+    color:var(  --color-secondary) ;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+}
+
+
+.main-hero .third{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+
+.search-input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .download-button {
+    padding: 8px 16px;
+    background-color:var(  --color-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
