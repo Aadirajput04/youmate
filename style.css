@@ -103,6 +103,12 @@ p {
     color: var(--color-logos);
 
 }
+.main-hero .first .second-box-tab {
+    font-size: var(--big-2-font) !important;
+    /* padding-bottom: 1rem; */
+    color:black !important;
+
+}
 
 .main-hero .second {
     background-color: var(--color-on-secondary);
@@ -115,6 +121,13 @@ p {
     padding: 0.5rem;
     gap: 0.5rem;
 
+}
+
+
+.main-hero .social-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
 }
 
 
