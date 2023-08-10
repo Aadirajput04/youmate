@@ -24,18 +24,258 @@
 
 
     <div class="main-hero">
-        <div class="first">
-            <h1>The Fastest Video Downloading</h1>
+
+        <h1>The Fastest Video Downloading </h1>
+
+        <div class="swiching-tabs">
+
+            <button id="videoButton" class="active"> <img src="./img/🦆 icon _youtube_1111.svg" alt="" width="24"> Video</button>
+            <button id="playlistButton"> <img src="./img/playlist-1.png" alt="" width="24"> Playlist</button>
         </div>
-        <div class="second"><img src="/img/🦆 icon _youtube_.svg" alt=""> Youtube</div>
-        <div class="third"> <input type="text" class="search-input" placeholder="video link ...">
-            <button class="download-button">Download</button>
+        <div id="videoContent" class="content">
+            <!-- Video content here -->
+            <div class="search-input-main-box">
+                <input type="text" class="search-input" placeholder="Paste your video link here">
+                <button class="download-button">Download</button>
+            </div>
+            <div class="changeable-data">
+
+                <div class="video-info-lable">
+
+                    <img src="./img/thumbnail.png" alt="">
+                    <div class="video-name">
+                        <h3>Ultimate Javascript course full video</h3>
+                        <div class="review-info">
+                            <p class="like"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.5477 7.50344C12.931 6.31427 13.1252 5.27344 13.1252 4.37594C13.1252 2.37677 12.3427 0.835938 11.0418 0.835938C10.336 0.835938 10.1177 1.25677 9.84432 2.29177C9.85849 2.2376 9.70849 2.8201 9.66515 2.97594C9.58099 3.27594 9.43432 3.78427 9.22599 4.50177C9.22033 4.52094 9.21191 4.53919 9.20099 4.55594L6.81265 8.29427C6.24751 9.17857 5.4136 9.85826 4.43349 10.2334L3.38599 10.6343C3.06565 10.757 2.79881 10.9886 2.63238 11.2886C2.46594 11.5885 2.41057 11.9375 2.47599 12.2743L3.04765 15.2226C3.11585 15.5744 3.28341 15.8992 3.53049 16.1587C3.77757 16.4182 4.09383 16.6014 4.44182 16.6868L11.3168 18.3718C12.3302 18.62 13.4007 18.4582 14.2953 17.9213C15.19 17.3845 15.8365 16.5161 16.0943 15.5051L17.406 10.3609C17.4922 10.0226 17.5 9.66905 17.4287 9.32726C17.3574 8.98547 17.209 8.66449 16.9947 8.38881C16.7805 8.11314 16.5061 7.89007 16.1924 7.73662C15.8788 7.58318 15.5343 7.50342 15.1852 7.50344H12.5477Z"
+                                        fill="#08003A" />
+                                </svg>1.1k</p>
+                            <p class="dislike"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M12.5476 11.819C12.9309 13.0081 13.1251 14.049 13.1251 14.9465C13.1251 16.9456 12.3426 18.4865 11.0418 18.4865C10.3751 18.4865 10.1434 18.1115 9.88927 17.1973L9.66427 16.3465C9.58094 16.0473 9.43427 15.5381 9.22594 14.8206C9.22029 14.8014 9.21187 14.7832 9.20094 14.7665L6.8126 11.0281C6.24742 10.1439 5.41352 9.46418 4.43344 9.08895L3.38594 8.68895C3.06528 8.5664 2.79813 8.33465 2.63152 8.03451C2.46491 7.73437 2.40952 7.38508 2.4751 7.04812L3.04677 4.09895C3.11518 3.74724 3.28292 3.4225 3.53015 3.16316C3.77738 2.90382 4.09373 2.72075 4.44177 2.63562L11.3168 0.950619C12.3302 0.702349 13.4006 0.864236 14.2953 1.40107C15.19 1.9379 15.8365 2.80626 16.0943 3.81729L17.4059 8.96145C17.4921 9.29978 17.4999 9.65334 17.4286 9.99513C17.3574 10.3369 17.2089 10.6579 16.9947 10.9336C16.7804 11.2092 16.506 11.4323 16.1924 11.5858C15.8788 11.7392 15.5342 11.819 15.1851 11.819H12.5476Z"
+                                        fill="#08003A" />
+                                </svg>1.1k</p>
+                            <p class="views"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20" fill="none">
+                                    <path
+                                        d="M9.89857 7.4677C10.7715 7.4677 11.6087 7.81448 12.226 8.43177C12.8433 9.04905 13.1901 9.88626 13.1901 10.7592C13.1901 11.6322 12.8433 12.4694 12.226 13.0867C11.6087 13.704 10.7715 14.0508 9.89857 14.0508C9.0256 14.0508 8.18839 13.704 7.5711 13.0867C6.95382 12.4694 6.60704 11.6322 6.60704 10.7592C6.60704 9.88626 6.95382 9.04905 7.5711 8.43177C8.18839 7.81448 9.0256 7.4677 9.89857 7.4677ZM9.89857 4.5835C13.6945 4.5835 16.9721 7.17558 17.8814 10.8078C17.9212 10.9666 17.8963 11.1346 17.8122 11.2751C17.7281 11.4155 17.5917 11.5168 17.4329 11.5566C17.2741 11.5964 17.106 11.5716 16.9656 11.4875C16.8252 11.4033 16.7239 11.2669 16.6841 11.1081C16.3037 9.59634 15.4293 8.25487 14.1998 7.29657C12.9702 6.33828 11.4558 5.81805 9.89687 5.81843C8.33796 5.81881 6.82382 6.33977 5.59471 7.29866C4.36559 8.25755 3.4919 9.59945 3.11225 11.1114C3.06962 11.2669 2.96785 11.3995 2.8287 11.4809C2.68956 11.5623 2.52409 11.586 2.36767 11.547C2.21126 11.508 2.07632 11.4093 1.99172 11.2721C1.90712 11.1349 1.87957 10.97 1.91496 10.8127C2.36119 9.0332 3.38912 7.45376 4.83554 6.32519C6.28196 5.19662 8.06395 4.58361 9.89857 4.5835Z"
+                                        fill="#08003A" />
+                                </svg>1.1k</p>
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="video-load-details">
+                    <div class="tabs">
+                        <div class="tab" id="tab-mp4">Mp4</div>
+                        <div class="tab" id="tab-mp3">Mp3</div>
+                        <div class="tab" id="tab-webm">Webm</div>
+                    </div>
+                    <div class="contents">
+                        <div class="box" id="box-mp4">
+                            <div class="contents-main-info-box">
+                                <div class="catagory-lable">
+
+                                    <h4>Quality</h4>
+                                    <h4>Format</h4>
+                                    <h4>File Size</h4>
+                                    <h4>Action</h4>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>1080p</p>
+                                    <p>mp4</p>
+                                    <p>69.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>720p</p>
+                                    <p>mp4</p>
+                                    <p>62.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>360p</p>
+                                    <p>mp4</p>
+                                    <p>52.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>144p</p>
+                                    <p>mp4</p>
+                                    <p>25.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="box" id="box-mp3">
+                            <!-- MP4 content here -->
+                            <div class="contents-main-info-box">
+                                <div class="catagory-lable">
+
+                                    <h4>Quality</h4>
+                                    <h4>Format</h4>
+                                    <h4>File Size</h4>
+                                    <h4>Action</h4>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>1080p</p>
+                                    <p>mp3</p>
+                                    <p>1.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>720p</p>
+                                    <p>mp3</p>
+                                    <p>9.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>360p</p>
+                                    <p>mp3</p>
+                                    <p>5.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>144p</p>
+                                    <p>mp3</p>
+                                    <p>3.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box" id="box-webm">
+                            <!-- WebM content here -->
+                            <div class="contents-main-info-box">
+                                <div class="catagory-lable">
+
+                                    <h4>Quality</h4>
+                                    <h4>Format</h4>
+                                    <h4>File Size</h4>
+                                    <h4>Action</h4>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>1080p</p>
+                                    <p>webm</p>
+                                    <p>3.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                                <div class="video-view-info">
+
+
+                                    <p>720p</p>
+                                    <p>webm</p>
+                                    <p>30.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>360p</p>
+                                    <p>webm</p>
+                                    <p>30.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+
+
+                                <div class="video-view-info">
+
+
+                                    <p>144p</p>
+                                    <p>webm</p>
+                                    <p>7.5mb</p>
+                                    <button class="download-btn">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
         </div>
+
+        <div id="playlistContent" class="content" style="display: none;">
+            <!-- Playlist content here -->
+            <div class="search-input-main-box">
+                <input type="text" class="search-input" placeholder="Paste your video link here">
+                <button class="download-button">Download</button>
+            </div>
+        </div>
+
     </div>
 
     <section class="support">
         <div class="f-text">
-            <p>As the third most popular website worldwide, YouTube offers an outstanding user experience. Nevertheless,
+            <p>As the third most popular website worldwide, YouTube offers an outstanding user experience.
+                Nevertheless,
                 it lacks a native video download functionality. <br>
                 This iswhere ssyoutube comes to your rescue!</p>
         </div>
@@ -47,12 +287,14 @@
                 alt=""><img src="/img/linux.svg.svg" alt="">
         </div>
         <div class="s-text">
-            <p>Experience the convenience of our YouTube video downloader service that allows you to effortlessly select
+            <p>Experience the convenience of our YouTube video downloader service that allows you to effortlessly
+                select
                 and download videos for free! Explore a wide <br>
                 range of formats including MP4, MP3, SQ, HD, Full HD, and more, to obtain high-quality videos. Our
                 online downloader is compatible with both PCs <br> and
                 mobile devices, ensuring you can enjoy it anytime, anywhere!</p>
-            <p>Discover how simple it is to download YouTube videos with our user-friendly service. Save your precious
+            <p>Discover how simple it is to download YouTube videos with our user-friendly service. Save your
+                precious
                 time by utilizing our online downloader on your <br>
                 devices and unlock access to free content!</p>
         </div>
@@ -70,13 +312,15 @@
             <h3>Best Youtube Video Downloader</h3>
         </div>
         <div class="discription-text">
-            <p>YouMate is the fastest Youtube Downloader tool that allows you to easily convert and download videos and
+            <p>YouMate is the fastest Youtube Downloader tool that allows you to easily convert and download videos
+                and
                 audio from youtube for free and in the best available <br>
 
                 quality. Y2Mate is the ultimate tool for downloading unlimited youtube videos without any need for
                 registration. You can quickly convert and download hundreds <br>
 
-                of videos and music files directly from youtube and other social media websites. We support all audio
+                of videos and music files directly from youtube and other social media websites. We support all
+                audio
                 and video formats like MP3, MP4, M4V, FLV, WEBM, 3GP, <br>
                 WMV, AVI, etc.; the most fantastic thing is that it's completely free. </p>
         </div>
@@ -168,13 +412,13 @@
                     <a href="#">Draw On</a>
                     <a href="#"> Word Search</a>
                     <a href="#">Task Planner</a>
-                   
+
                 </div>
                 <div class="resource">
                     <h3>RESOURCES</h3>
                     <a href="#">Community</a>
                     <a href="#"> Marketplace</a>
-                   
+
                 </div>
             </div>
         </div>
@@ -186,8 +430,7 @@
 
 
 
-
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
