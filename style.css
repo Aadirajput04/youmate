@@ -219,14 +219,31 @@ min-width: 500px;
 }
 
 
-.contents .catagory-lable {
+
+.bg-white{
+    background-color: #FFF;
+    padding: 20px;
+    width: 535px;
+}
+.video-view-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 0;
+    gap: 2rem;
+}
+.video-view-info img{
+    width: 100px;
+}
+
+ .catagory-lable {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: #f4f4f4;
 }
 
-.contents .catagory-lable h4 {
+.catagory-lable h4 {
     padding: 10px;
     color: rgba(8, 0, 58, 0.69);
     font-size: 14px;
@@ -243,9 +260,9 @@ min-width: 500px;
 }
 
 
-.contents .video-view-info p {
+ .video-view-info p {
     padding: 10px;
-    padding-left: 25px;
+   
     color: rgba(8, 0, 58, 0.69);
 
     font-size: 14px;
@@ -254,13 +271,26 @@ min-width: 500px;
     line-height: normal;
 }
 
+.contents .video-view-info p{
+    padding: 10px;
+    padding-left: 25px;
+    color: rgba(8, 0, 58, 0.69);
 
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+
+}
 .contents .contents-main-info-box {
     display: flex;
     flex-direction: column;
 }
 
-
+ span {
+    margin-left: 40px;
+}
 
 button.download-btn {
     background-color: #D33396;
@@ -295,7 +325,10 @@ line-height: normal;
      /* Text color ko white kiya gaya hai, jisse text dikhayi de */
 }
 
-
+.catagory-lable{
+    display: flex;
+    flex-direction: row;
+}
 
 
 
