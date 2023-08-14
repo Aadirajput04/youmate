@@ -41,6 +41,21 @@
 
 }
 
+.main-hero .search button div{
+    display: none;
+} 
+
+.main-hero .search button.loading span{
+    display: none;
+} 
+
+.main-hero .search button.loading div{
+    display: block;
+} 
+
+
+
+
 
 
 
