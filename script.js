@@ -48,22 +48,22 @@ const api = 'https://youmatebackend.youmateteamflax.repl.co'
 
 
 
-function numberToK(number = 0){
+function numberToK(number = 0) {
 
-    if(number < 1000){
+    if (number < 1000) {
         return number.toString()
-    }else{
+    } else {
         const newNumber = number / 1000
         return Math.round(newNumber * 10) / 10 + 'K'
     }
 
 }
 
-function urlToPageUrl(url = ''){
+function urlToPageUrl(url = '') {
     const page = window.location.href
 
     // remove query param if exist
-    if(page.indexOf('?') != -1){
+    if (page.indexOf('?') != -1) {
         page = page.split('?')[0]
     }
 
@@ -80,20 +80,26 @@ let isLoading = false
 
 // https://www.youtube.com/playlist?list=PLPwpWyfm6JADGP7TZF-FzCtP9Nm-g5B8v
 
-document.querySelector('form').addEventListener('submit', async function(event){
+document.querySelector('form').addEventListener('submit', async function (event) {
     event.preventDefault()
 
-    if(isLoading) return
+    if (isLoading) return
 
     isLoading = true
     // check for playlist or video
 
-    if(search.value.indexOf('playlist') == 0){
+    if (search.value.indexOf('playlist') == -1) {
         // do video request
+
+        // clear previous video
+        clearVideos()
+
         isSearchedForVideo = true
-    }else{
+        toggleLoading()
+        await getVideo(search.value)
+    } else {
         // do playlist task
-        
+
         // clear the playlist
         clearPlaylist()
 
@@ -108,7 +114,7 @@ document.querySelector('form').addEventListener('submit', async function(event){
 })
 
 
-async function getPlaylist(url){
+async function getPlaylist(url) {
     try {
         const res = await fetch(api + '/api/playlist?url=' + url)
         const json = await res.json()
@@ -121,22 +127,21 @@ async function getPlaylist(url){
     }
 }
 
-function toggleLoading(){
-    if(isLoading){
+function toggleLoading() {
+    if (isLoading) {
         document.querySelector('form button').className = 'loading'
-        document.querySelector('#output').style.display = 'none' 
-    }else{
+        document.querySelector('#output').style.display = 'none'
+    } else {
         document.querySelector('form button').className = ''
-        document.querySelector('#output').style.display = 'block' 
+        document.querySelector('#output').style.display = 'block'
     }
 }
 
 
-function renderPlaylist(data){
+function renderPlaylist(data) {
     const parent = document.querySelector('#playlist')
     parent.innerHTML = playlistStructure
     parent.querySelector('h2').innerText = data.title
-    console.log(data)
 
     // rendering playlist card
     data.videos.forEach(element => {
@@ -155,18 +160,108 @@ function renderPlaylist(data){
 
         parent.appendChild(div)
     });
-    
+
 
     // hide the video area if playlist is visible and vise versa
     document.querySelector('#video').style.display = 'none'
 }
 
-function clearPlaylist(){
+function clearPlaylist() {
     const parent = document.querySelector('#playlist')
-    while(parent.firstChild){
+    while (parent.firstChild) {
         parent.firstChild.remove()
     }
 }
+
+
+
+// ------------video -----------
+
+async function getVideo(url) {
+    try {
+        const res = await fetch(api + '/api/video?url=' + url)
+        const json = await res.json()
+
+        // show the video
+        renderVideo(json)
+    } catch (error) {
+        console.log(error)
+        alert('some thing went wrong')
+    }
+}
+
+
+function renderVideo(data) {
+    const parent = document.querySelector('#video')
+
+    // updating data
+    parent.querySelector('img').src = data.thumbnail
+    parent.querySelector('h4').innerText = data.title
+    parent.querySelector('.views').innerText = numberToK(data.views)
+    parent.querySelector('.likes').innerText = numberToK(data.likes)
+    parent.querySelector('.dislikes').innerText = numberToK(data.dislikes)
+
+    const filter = filterData(data.downloads)
+
+    // creating table rows
+
+    for (let index = 0; index < filter.length; index++) {
+
+        let parent = null
+        if (index == 0) {
+            parent = document.querySelector('.audio tbody')
+        } else if (index == 1) {
+            parent = document.querySelector('.mp4 tbody')
+        } else if (index == 2) {
+            parent = document.querySelector('.webm tbody')
+        }
+
+        filter[index].forEach(element => {
+
+            const tr = document.createElement('tr')
+            tr.className = 'table-item'
+            tr.innerHTML = videoCardStructure
+            tr.querySelector('.quality').innerText = element.quality
+            tr.querySelector('.format').innerText = element.format
+            tr.querySelector('.size').innerText = element.size
+            tr.querySelector('a').href = element.url
+
+            parent.appendChild(tr)
+        });
+    }
+
+}
+
+function filterData(data) {
+    const audio = []
+    const mp4 = []
+    const webm = []
+
+    data.forEach(element => {
+        if (element.format == '3gp') {
+            audio.push(element)
+        } else if (element.format == 'mp4') {
+            mp4.push(element)
+        } else if (element.format == 'webm') {
+            webm.push(element)
+        }
+    });
+
+
+    return [audio, mp4, webm]
+}
+
+
+function clearVideos() {
+    const items = document.querySelectorAll('.table-item')
+    let index = 0
+    const len = items.length
+    while (index < len) {
+        items[index].remove()
+        index += 1
+    }
+}
+
 
 
 
@@ -230,12 +325,12 @@ const playlistCardStructure = `
 `
 
 
+const videoCardStructure = `
 
+<td class="quality">720p</td>
+<td class="format">MP4</td>
+<td class="size">400mb</td>
+<td><a href="#">Download</a></td>
 
-/**
- * async function getText(file) {
-  let x = await fetch(file);
-  let y = await x.text();
-  document.getElementById("demo").innerHTML = y;
-}
- */
+`
+
