@@ -2,49 +2,25 @@
 const api = 'https://youmatebackend.youmateteamflax.repl.co'
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     const videoButton = document.getElementById('videoButton');
-//     const playlistButton = document.getElementById('playlistButton');
-//     const videoContent = document.getElementById('videoContent');
-//     const playlistContent = document.getElementById('playlistContent');
 
-//     videoButton.addEventListener('click', function() {
-//         videoContent.style.display = 'block';
-//         playlistContent.style.display = 'none';
-//         videoButton.classList.add('active');
-//         playlistButton.classList.remove('active');
-//     });
+// tab change
+function changeTab(index) {
 
-//     playlistButton.addEventListener('click', function() {
-//         videoContent.style.display = 'none';
-//         playlistContent.style.display = 'block';
-//         playlistButton.classList.add('active');
-//         videoButton.classList.remove('active');
-//     });
-// });
+    const items = document.querySelectorAll('.tabs span')
+    const contents = document.querySelectorAll('table')
+    for (let i = 0; i < items.length; i++) {
+        items[i].className = ''
+        contents[i].classList.remove('active')
 
+        if(i == index){
+            items[i].className = 'active'
+            contents[i].classList.add('active')
+        }
+        
+    }
 
+}
 
-
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const tabs = document.querySelectorAll(".tab");
-//     const boxes = document.querySelectorAll(".box");
-
-//     tabs.forEach(tab => {
-//         tab.addEventListener("click", function () {
-//             tabs.forEach(t => t.classList.remove("underline"));
-//             tab.classList.add("underline");
-
-//             const targetBoxId = tab.id.replace("tab-", "box-");
-//             boxes.forEach(box => box.classList.remove("active"));
-//             document.getElementById(targetBoxId).classList.add("active");
-//         });
-//     });
-
-//     tabs[0].click(); // Display MP3 content by default
-// });
 
 
 
@@ -71,6 +47,11 @@ function urlToPageUrl(url = '') {
 }
 
 
+function byteToMb(bytes = 0){
+    return Math.round(bytes / (1024 * 1024)) + 'mb'
+}
+
+
 
 // api call
 
@@ -78,11 +59,15 @@ const search = document.querySelector('#search')
 let isSearchedForVideo = true
 let isLoading = false
 
-// https://www.youtube.com/playlist?list=PLPwpWyfm6JADGP7TZF-FzCtP9Nm-g5B8v
 
 document.querySelector('form').addEventListener('submit', async function (event) {
     event.preventDefault()
+    fetchData()
+})
 
+
+
+async function fetchData(){
     if (isLoading) return
 
     isLoading = true
@@ -110,8 +95,7 @@ document.querySelector('form').addEventListener('submit', async function (event)
 
     isLoading = false
     toggleLoading()
-
-})
+}
 
 
 async function getPlaylist(url) {
@@ -223,7 +207,7 @@ function renderVideo(data) {
             tr.innerHTML = videoCardStructure
             tr.querySelector('.quality').innerText = element.quality
             tr.querySelector('.format').innerText = element.format
-            tr.querySelector('.size').innerText = element.size
+            tr.querySelector('.size').innerText = byteToMb(element.size)
             tr.querySelector('a').href = element.url
 
             parent.appendChild(tr)
@@ -334,3 +318,18 @@ const videoCardStructure = `
 
 `
 
+
+
+
+
+
+// --------------- fetch data if url not empty ---------------------
+
+const urlParams = new URLSearchParams(window.location.search);
+const myParam = urlParams.get('url');
+
+// if url contain youtube url then start fetch
+if(myParam){
+    document.querySelector('#search').value = myParam
+    fetchData()
+}

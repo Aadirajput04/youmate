@@ -46,7 +46,7 @@
 
                 <div id="playlist" class="playlist">
 
-<!--                     
+                    <!--                     
                     <p class="label">Playlist</p>
                     <h2>TypeScript: The Vue Parts</h2>
                     <div class="result">
@@ -144,19 +144,20 @@
                         <div class="video-holder">
                             <!-- tab -->
                             <div class="tabs">
-                                <span>Audio</span>
-                                <span class="active">MP4</span>
-                                <span>WEBM</span>
+                                <span onclick="changeTab(0)">Audio</span>
+                                <span onclick="changeTab(1)" class="active">MP4</span>
+                                <span onclick="changeTab(2)">WEBM</span>
                             </div>
                             <!-- table -->
                             <div class="content">
+                                
                                 <table class="audio">
                                     <colgroup>
-                                        <col style="width: auto;">
-                                        <col style="width: auto;">
-                                        <col style="width: auto">
-                                        <col style="width: 100px">
-                                     </colgroup>
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%">
+                                        <col style="width: 10%">
+                                    </colgroup>
                                     <tr>
                                         <th>Quality</th>
                                         <th>Format</th>
@@ -164,17 +165,17 @@
                                         <th>Action</th>
                                     </tr>
                                     <tbody>
-                                        
+
                                     </tbody>
                                 </table>
 
-                                <table class="mp4">
+                                <table class="mp4 active">
                                     <colgroup>
-                                        <col style="width: auto;">
-                                        <col style="width: auto;">
-                                        <col style="width: auto">
-                                        <col style="width: 100px">
-                                     </colgroup>
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%">
+                                        <col style="width: 10%">
+                                    </colgroup>
                                     <tr>
                                         <th>Quality</th>
                                         <th>Format</th>
@@ -182,17 +183,17 @@
                                         <th>Action</th>
                                     </tr>
                                     <tbody>
-                                        
+
                                     </tbody>
                                 </table>
 
                                 <table class="webm">
                                     <colgroup>
-                                        <col style="width: auto;">
-                                        <col style="width: auto;">
-                                        <col style="width: auto">
-                                        <col style="width: 100px">
-                                     </colgroup>
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%;">
+                                        <col style="width: 30%">
+                                        <col style="width: 10%">
+                                    </colgroup>
                                     <tr>
                                         <th>Quality</th>
                                         <th>Format</th>
@@ -200,7 +201,7 @@
                                         <th>Action</th>
                                     </tr>
                                     <tbody>
-                                        
+
                                     </tbody>
                                 </table>
                             </div>

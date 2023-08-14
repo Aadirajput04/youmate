@@ -167,16 +167,31 @@
     color: var(--color-primary);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
 
+
+
+
+
+
+table {
+    width: 100% !important;
+    border-collapse: collapse;
+    display: none;
+
+}
+
+table.active{
+    display: block;
 }
 
 table th,
 table td {
     text-align: left;
     padding: 1rem 1.5rem;
+}
+
+table colgroup{
+    width: 100%;
 }
 
 table tr:nth-child(even) {
