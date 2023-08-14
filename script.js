@@ -36,7 +36,7 @@ function numberToK(number = 0) {
 }
 
 function urlToPageUrl(url = '') {
-    const page = window.location.href
+    let page = window.location.href
 
     // remove query param if exist
     if (page.indexOf('?') != -1) {
@@ -69,7 +69,7 @@ document.querySelector('form').addEventListener('submit', async function (event)
 
 async function fetchData(){
     if (isLoading) return
-
+    toggleOutput(false)
     isLoading = true
     // check for playlist or video
 
@@ -105,9 +105,10 @@ async function getPlaylist(url) {
 
         // show the playlist
         renderPlaylist(json)
+        toggleOutput(true)
     } catch (error) {
         console.log(error)
-        alert('some thing went wrong')
+        alert('something went wrong')
     }
 }
 
@@ -158,6 +159,14 @@ function clearPlaylist() {
 }
 
 
+function toggleOutput(isVisible = false){
+    if(isVisible){
+        document.querySelector('#output').style.display  = 'block'
+    }else{
+        document.querySelector('#output').style.display  = 'none'
+    }
+}
+
 
 // ------------video -----------
 
@@ -168,9 +177,10 @@ async function getVideo(url) {
 
         // show the video
         renderVideo(json)
+        toggleOutput(true)
     } catch (error) {
         console.log(error)
-        alert('some thing went wrong')
+        alert('something went wrong')
     }
 }
 
@@ -314,7 +324,7 @@ const videoCardStructure = `
 <td class="quality">720p</td>
 <td class="format">MP4</td>
 <td class="size">400mb</td>
-<td><a href="#">Download</a></td>
+<td><a href="#" target="blank">Download</a></td>
 
 `
 

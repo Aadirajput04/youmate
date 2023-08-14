@@ -61,7 +61,9 @@
 
 /* ---------------- output - playlist */
 
+
 .main-hero .output {
+    display: none;
     margin: auto;
     margin-top: 4rem;
     max-width: 800px;
