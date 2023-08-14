@@ -179,7 +179,7 @@ p {
     justify-content: center;
     background-color: #fff;
     cursor: pointer;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .tab:hover {
@@ -213,9 +213,9 @@ min-width: 500px;
     color: #b10b71;
     background-color: #d3339621;
     border-bottom: 3px solid #b10b71;
-    border-bottom-right-radius: 8px;
+    /* border-bottom-right-radius: 8px;
 
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius: 8px; */
 }
 
 
