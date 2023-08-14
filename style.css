@@ -583,9 +583,9 @@ line-height: normal;
 
 
 footer {
-    margin-top: 3rem;
-    border-top: 4px solid var(--color-primary-variant);
-    min-height: 400px;
+   
+    /* border-top: 4px solid var(--color-primary-variant); */
+    /* min-height: 400px; */
     background-color: var(--color-on-secondary);
 }
 
