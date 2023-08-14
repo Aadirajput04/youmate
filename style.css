@@ -70,21 +70,40 @@ p, input, a {
     line-height: 1.7rem;
 }
 
+p{
+    margin: 1em 0;
+    font-size: var(--medium-font);
+}
+
+a{
+    text-decoration: none;
+}
 
 
 
 
 
+
+
+header{
+    height: 60px;
+    background-color: #D33396;
+    position: sticky;
+    top: 0;
+}
+
+
+header h2{
+    color: white;
+    margin: 0;
+}
 
 .navbar {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
-    height: 5rem;
-    background-color: #D33396;
-    padding: 2rem;
-
+    height: 100%;
 }
 
 .navbar ul {
@@ -92,21 +111,30 @@ p, input, a {
     list-style: none;
     gap: 2rem;
 
-
 }
 
-.navbar ul li a {
+.navbar  a {
     text-decoration: none;
     color: white;
-
-    font-size: var(--average-font);
-    font-weight: 700;
 }
 
 .navbar ul li a:hover {
     border-bottom: 2px solid white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- support ------------------- */
 
 .support h2{
     text-align: center;
@@ -115,3 +143,68 @@ p, input, a {
 .support h3{
     text-align: center;
 }
+
+
+.support .supported-platform{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 4rem 0;
+}
+
+
+.support .supported-platform img{
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+/* ---------------------- description --------- */
+.description h3{
+    text-align: center;
+}
+
+.description .instructions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+
+.description .features{
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    justify-content: center;
+}
+
+.description .features .box{
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 30px;
+    border-radius: 8px;
+    padding: 1rem 8px;
+
+}
+
+
+
+
+/* ------------------ footer -------------- */
+
+footer .copyright{
+    border-top: 1px solid rgb(230, 230, 230);
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
