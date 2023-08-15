@@ -156,6 +156,7 @@ header h2{
 .support .supported-platform img{
     display: block;
     margin: auto;
+    width: 100%;
 }
 
 
