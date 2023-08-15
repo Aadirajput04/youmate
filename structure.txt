@@ -1,0 +1,50 @@
+
+
+------------------- video structure --------------------
+video format - 3gp, mp4, webm
+request - ./api/video?url=<video_url>
+
+{
+    "title": "Custom Types and Literal Types - TypeScript: The Vue Parts, Part 6",
+    "likes": 35,
+    "dislikes": 0,
+    "views": 0,
+    "thumbnail": "https://i.ytimg.com/vi_webp/0dFm9h3tjs0/maxresdefault.webp",
+    "duration": 408,
+    "youtubeUrl": "https://www.youtube.com/watch?v=0dFm9h3tjs0",
+    "uploadAt": "20200422",
+    "downloads": [
+        {
+            "url": "https://rr2---sn-8vq54voxpo-25ue.googlevideo.com/videoplayback?expire=1688976711&ei=52irZK-7HciZ3LUP7rOGoAE&ip=2402%3A8100%3A261d%3A4461%3Af0fe%3A8ab%3A6b50%3Ae890&id=o-AJLlKYdVJc8UEpY4xtSgRoY20O0-cinwpSWDDtYav7p8&itag=17&source=youtube&requiressl=yes&mh=r3&mm=31%2C29&mn=sn-8vq54voxpo-25ue%2Csn-pqx5jxaa0a5g-qxal&ms=au%2Crdu&mv=m&mvi=2&pcm2cms=yes&pl=47&initcwndbps=218750&spc=Ul2Sq2NJVsFXQNg2aUzimQTEFDWEgEY&vprv=1&svpuc=1&mime=video%2F3gpp&gir=yes&clen=1990691&dur=408.160&lmt=1587568462658418&mt=1688954708&fvip=2&fexp=24007246&beids=24350018&c=ANDROID&txp=6211222&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRgIhAP-I2s_OmTBxX_Sfr267bBC9sVd_vy2g1m9LJ4s75waUAiEA8XwsBkMY6svBLNhLuiHEsoloZ70qmBUBDC_8xzNdgC0%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpcm2cms%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIhAPipC43sLRfoAvuo8cMqZdCgRbSSIdrMUV_3B1bqTSWlAiADDXtK1wQjZGqj5rbzPwetiCR-Ukm6k-QUhuG54UtZiQ%3D%3D",
+            "quality": "144p",
+            "format": "3gp",
+            "size": 1990691
+        },
+        {
+            "url": "https://rr2---sn-8vq54voxpo-25ue.googlevideo.com/videoplayback?expire=1688976711&ei=5mirZKjOO_DA4t4P0fe00Ak&ip=2402%3A8100%3A261d%3A4461%3Af0fe%3A8ab%3A6b50%3Ae890&id=o-AOVnX4c31tIj_ZyULSfD9RDO7y3ChKeblT3p4TKYDUUH&itag=160&source=youtube&requiressl=yes&mh=r3&mm=31%2C29&mn=sn-8vq54voxpo-25ue%2Csn-pqx5jxaa0a5g-qxal&ms=au%2Crdu&mv=m&mvi=2&pl=47&initcwndbps=218750&vprv=1&svpuc=1&mime=video%2Fmp4&gir=yes&clen=921680&dur=408.033&lmt=1672272654073144&mt=1688954708&fvip=2&keepalive=yes&fexp=24007246%2C24363392%2C51000014&c=IOS&txp=6216224&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Csvpuc%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&sig=AOq0QJ8wRQIgMQNsHYPcEtk09qTuPBpNuQdCbheGcolJtrHka0mcmPcCIQCSKoqEfM3YZij3j6zGyBXGK8Lcm2O1UFFtj_BY2R2rDw%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=AG3C_xAwRQIgfKnKYCIGcgtN7TZ9quEOeGgDOrIA9giofp1KokEVLjICIQC_Ej0JjVOORdStEyao_MLsVXdTzPA4UY0j4xJWVFBOzg%3D%3D",
+            "quality": "144p",
+            "format": "mp4",
+            "size": 921680
+        }
+    ]
+}
+
+
+
+--------------------- Playlist ---------------------
+
+request - ./api/playlist?url=<video_url>
+
+{
+    "title": "TypeScript: The Vue Parts",
+    "videos": [
+        {
+            "title": "Which Vue Developers should learn TypeScript? - TypeScript: The Vue Parts, Part 1",
+            "likes": 90,
+            "dislikes": 0,
+            "views": 3124,
+            "thumbnail": "https://i.ytimg.com/vi_webp/O9QSg09c2xw/maxresdefault.webp",
+            "url": "https://www.youtube.com/watch?v=O9QSg09c2xw"
+        }
+    ]
+}
