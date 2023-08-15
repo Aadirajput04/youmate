@@ -216,3 +216,14 @@ table a {
     }
 
 }
+
+@media only screen and (max-width: 500px) {
+
+    .main-hero .search {
+        grid-template-columns: 100%;
+    }
+.main-hero .search button {
+padding: 0.7rem;
+
+    }
+}
