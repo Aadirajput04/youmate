@@ -41,6 +41,17 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
 .main-hero .search button div {
     display: none;
 }
@@ -222,8 +233,13 @@ table a {
     .main-hero .search {
         grid-template-columns: 100%;
     }
-.main-hero .search button {
-padding: 0.7rem;
 
+
+
+
+
+    .main-hero .search button {
+
+        padding: 0.7rem                     ;
     }
 }
